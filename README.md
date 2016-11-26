@@ -43,3 +43,6 @@ docker inspect 6518322bbf494022f297ea40f36f5d25a79b2729b245b4405c1ff65655dd786d
 ```
 docker run -it -p 8888:8080 tomcat:8.0
 ```
+
+### All changes are writen in the container's writable layer , when the container was deleted, the writeable layer also be deleted, but the image will stay the same.
+
