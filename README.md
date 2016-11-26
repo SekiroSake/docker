@@ -46,3 +46,22 @@ docker run -it -p 8888:8080 tomcat:8.0
 
 ### All changes are writen in the container's writable layer , when the container was deleted, the writeable layer also be deleted, but the image will stay the same. Multi containers can share same image
 
+## Ways to build a docker image
+- Commit changes in a docker container
+  - Spin up a container from a  base image
+  - Install git package in the container
+  - Commit changes made in the container
+ ```
+ docker run -it debian:jessie
+ 
+ ----
+ 
+ apt-get update && apt-get install -y git
+ 
+ ----
+ docker commit 6cafba385081 pg707284828/debian:1.00
+ ----
+ docker run -it pg707284828/debian:1.00
+ ```
+- Write a docker file
+
