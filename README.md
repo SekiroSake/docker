@@ -12,5 +12,5 @@ docker ps
 ```
 - Find all docker instance (including stop one)
 ```
-docker ps
+docker ps -a
 ```
